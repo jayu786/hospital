@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>donation</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript">
+		function formValidator()
+{
+	var username = document.getElementById('username');
+	var email = document.getElementById('email');
+	if(lengthRestriction(username, 6, 8))
+	{
+		if(emailValidator(email, "Please enter a valid email address"))	
+		{
+		return true;
+		}
+	}
+	return false;
+}
+function lengthRestriction(elem, min, max)
+{
+	var uInput = elem.value;
+	if(uInput.length >= min && uInput.length <= max)
+	{
+		return true;
+	}
+	else
+	{
+		alert("Please enter between " +min+ " and " +max+ " characters");
+		elem.focus();
+		
+		return false;
+	}
+}
+function emailValidator(elem, helperMsg)
+{
+	var emailExp = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/;
+	if(elem.value.match(emailExp))
+	{
+		return true;
+
+	}else
+	{
+		alert(helperMsg);
+		elem.focus();
+		return false;
+	}        
+}
+</script>
+<style>
+*{margin:0;padding:0;}
+body{background-image:url(table.jpg);background-repeat:no-repeat;background-size:cover;width:100%;background-position:center;}
+h1{text-align:center;padding:20px;color:#fff;}
+.navbar{
+margin:0;padding:0;
+}
+.navbar ul{
+list-style-type:none;display:flex;justify-content:center;
+background-color:ffb606;
+padding:20px;
+}
+.navbar ul li{
+display:inline:block;
+}
+.navbar ul li a{
+text-decoration:none;
+padding-left:20px;
+color:#000;
+font-weight:bold;
+font-size:25px;
+text-transform:capitalize;
+}
+.mb{
+margin-bottom:130px;
+}
+h1{text-align:center;padding:20px;}
+h2{text-align:center;padding:20px;}
+.register{
+	position: relative;
+	left: 30%;
+background:#ffb606;
+width:500px;
+color:#000;
+font-size:18px;
+padding:20px;
+border-radius:25px;
+}
+#register{
+margin-left:30px;
+
+}
+.lable{color:#000;font-size:17px;font-family:sans-serif;font-style:verdana;}
+#name{
+width:300px;
+border:none;
+border-radius:4px;
+padding:7px; 
+outline:0;
+}
+.name{width:300px;border:none;border-radius:4px;padding:7px; outline:0;}
+.forms-controls{
+width:125px;
+border:none;
+border-radius:4px;
+padding:7px; 
+outline:0;
+}
+#sub{
+width:200px;
+padding:5px;
+font-size:20px;
+font-style:italic;
+font-weight:500;
+border-radius:4px;
+border:none;
+outline:0;
+}
+</style>
+</head>
+<body> 
+<div class="container">
+	<div class="menu">
+		<ul>
+			<li ><a href="Z:\web designing\website\home.html" >HOME</a></li>
+			<li class=""><a href="Z:\web designing\website\doctors.html">DOCTORS</a>
+			<li><a href="Z:\web designing\website\about.html">ABOUT</a>
+			<li class="ul"><a href="Z:\web designing\website\donation.html"  style="color:red;">DONATION</a>
+			<li class="aa"><a href="Z:\web designing\website\contact.html">CONTACT</a>
+			<li class="aaa" style="text-decoration: none; color: white; font-family: verdana;letter-spacing: 3px;"><B>KIRAN HOSPITAL</B></li>
+
+		</ul>
+	</div>
+	<div class="register">
+	<h2> Register Here</h2><br><br>
+	<form onsubmit='return formValidator()' method="post"  id="register">
+
+		<lable class="lable"> First Name:</lable><br>
+		<input type="text" name="fname" class="name" id="username"placeholder="First Name"><br><br>
+		<lable class="lable">Last Name</lable><br>
+		<input type="text" name="lname" id="name"placeholder="Lirst Name"><br><br>
+		<lable class="lable">Mobile Number:</lable><br>
+		<input tpe="tex" name="number" id="name"placeholder="Mobile Number"><br><br>
+		<lable class="lable">Email:</lable><br>
+		<input type="email" name="email" class="name" id="email"placeholder=" Enter Email Id"><br><br>
+		<lable class="lable">Date</lable><br>
+		<input type="date" name="date"  class="forms-controls" id="date"placeholder="date">
+		<lable class="lable">Time</lable>
+		<input type="time" name="pass" class="forms-controls" id="forms-controls"placeholder="Time"><br><br>
+		<lable>Person</lable><br>
+		<input type="text" name="text" class="name" id="email"placeholder="How Many Person"><br><br>
+		<lable>Payment Mothod</lable><br><br>
+<input type="radio" name="cash"id="male"><span id="male">&nbsp; Cash</span>&nbsp;&nbsp;
+
+<input type="radio" name="onlime"id="male"><span id="female">&nbsp; Online</span>&nbsp;&nbsp;
+<input type="radio" name="other"id="male"><span id="other">&nbsp; Other</span>&nbsp;&nbsp;<br><br>
+<input type="submit" value="Submit" id="sub">
+</form>
+</div><div class="foot-page">
+			<div class="foot">
+					<h2>KIRAN <SPAN style="color: red;">HOSPITAL</SPAN></h2>
+					<P>Thanks for Visiting At Our Hospital</P>
+					<p>Kiran Hospital &copy; 2020 </p>
+				</div>
+					<div class="foot">
+					<p style="color:#5383d3;font-weight: bold;font-size: 20px;">Address: </p>
+					<P>A 50 Lh Road, Surat <br><br>Gujurat-395006</P>
+				<p style="color:#5383d3;font-weight: bold;font-size: 20px;">Phone No: </p>
+					<p>+91 9784394739</p>
+			<p style="color:#5383d3;font-weight: bold;font-size: 20px;">Email: </p>
+					<p>kiranhospital@gmail.com</p>
+				</div>
+				<div class="foot">
+					<h2 style="color:#ffd606;font-weight: bold;font-size: 25px;">About The Our Hospital</h2>
+					<P>Thanks for Visiting At Our Hospital</P>
+					<P><a href="Z:\web designing\website\home.html">Home</a></P><br>
+					<P><a href="Z:\web designing\website\donation.html">Donation</a></P><br>
+					<P><a href="Z:\web designing\website\about.html">About Us</a></P><br>
+				</div>
+		</div>	
+</body>
+</html>
